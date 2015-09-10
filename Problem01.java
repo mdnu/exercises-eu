@@ -14,7 +14,7 @@ class Problem01 {
     // creates a new instance (object) of the 'Problem1' class,
     // called 'aN'.
     // using this instance, we can invoke the SumDivN method.
-    Problem1 aN = new Problem1();
+    Problem01 aN = new Problem01();
     System.out.println(aN.SumDivN(3) + aN.SumDivN(5)- aN.SumDivN(15));
   }
 }
