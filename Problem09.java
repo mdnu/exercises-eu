@@ -7,10 +7,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Problem9 {
+class Problem09 {
 
   public int gcd(int a, int b) {
-    Problem9 prob9 = new Problem9();
+    Problem09 prob9 = new Problem09();
     if (b == 0) {
       return a;
     } else {
@@ -36,7 +36,7 @@ class Problem9 {
   } */
 
   public static void main(String[] args) {
-    Problem9 prob9 = new Problem9();
+    Problem09 prob9 = new Problem09();
     int s = 1000;
     int s2 = s/2;
     double mLimit = Math.ceil(Math.sqrt(s2));

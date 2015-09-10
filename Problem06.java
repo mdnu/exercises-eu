@@ -8,7 +8,7 @@
 
 // goal: a program for when "limit" is large (>100)
 
-class Problem6 {
+class Problem06 {
   // this method computes the sum from 1 to limit.
   public int sum(int n) {
     int finalSum = (n*(n+1))/2;
@@ -20,7 +20,7 @@ class Problem6 {
     return finalSqSum;
   }
   public static void main(String[] ars) {
-    Problem6 prob6 = new Problem6();
+    Problem06 prob6 = new Problem06();
     System.out.println(prob6.sum(100)*prob6.sum(100) - prob6.sqSum(100));
   }
 }

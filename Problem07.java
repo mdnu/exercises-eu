@@ -3,7 +3,7 @@
 //
 // What is the 10 001st prime number?
 
-class Problem7 {
+class Problem07 {
   public boolean isPrime(int n) {
     if (n == 1) {
       return false;
@@ -39,9 +39,26 @@ class Problem7 {
       }
     }
   }
+  
+  public int limitnum (int a) {
+	 int limit = a;
+	 return limit;
+  }
+  
+  public int primeDivCount (int limitnum) {
+	  int count = 0;
+	  Problem07 prob7 = new Problem07();
+	  for (int i = 1; i<=Math.sqrt(limitnum); i++) {
+		  if (prob7.isPrime(i) == true) {
+			  count++;
+		  }
+	  }
+	  return count;
+  }
+  
   public static void main(String[] args) {
-    Problem7 prob7 = new Problem7();
-    int limit = 10001;
+    Problem07 prob7 = new Problem07();
+	int limit = prob7.limitnum(10);
     int count = 1;
     int grand = 1;
     while (grand <= limit) {

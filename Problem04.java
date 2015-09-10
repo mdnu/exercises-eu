@@ -7,7 +7,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-class Problem4 {
+class Problem04 {
 
   // the following Problem4 method is for
   // nominally reversing an integer.
@@ -23,7 +23,7 @@ class Problem4 {
   // the following Problem4 method is for
   // checking if a given integer is palindromic.
   public boolean isPalindrome(int n) {
-    Problem4 instance = new Problem4();
+    Problem04 instance = new Problem04();
     boolean palindrome = false;
     if (n == instance.reverse(n)) {
       palindrome = true;
@@ -33,7 +33,7 @@ class Problem4 {
 
   // the main argument starts here.
   public static void main(String[] args) {
-    Problem4 prob4 = new Problem4();
+    Problem04 prob4 = new Problem04();
     int largestPalindrome = 0;
     int a = 100;
     while (a <= 999) {

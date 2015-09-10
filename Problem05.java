@@ -7,7 +7,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Problem5 {
+class Problem05 {
 
   // method checks for primality.
   public boolean isPrime(int n) {
@@ -23,7 +23,7 @@ class Problem5 {
   }
   // method generates a list of the first n-primes.
   public List<Integer> list(int n) {
-    Problem5 prob5 = new Problem5();
+    Problem05 prob5 = new Problem05();
     List<Integer> list = new ArrayList<Integer>();
     for (int i = 0; i <= n; i++) {
       if (prob5.isPrime(i) == true) {
@@ -33,7 +33,7 @@ class Problem5 {
     return list;
   }
   public static void main(String[] args) {
-    Problem5 prob5 = new Problem5();
+    Problem05 prob5 = new Problem05();
     List<Integer> mainlist = new ArrayList<Integer>();
     mainlist = prob5.list(20);
     double bigN = 1;

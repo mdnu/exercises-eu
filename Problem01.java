@@ -3,7 +3,7 @@
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
-class Problem1 {
+class Problem01 {
   public int max = 999;
   // a method to sum all numbers divisible by n, smaller than 1k
   public int SumDivN(int n) {
