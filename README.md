@@ -1,5 +1,5 @@
 # exercises-eu
 
-Project Euler Exercises.
+ｐｒｏｊｅｃｔ　ｅｕｌｅｒ　ｅｘｅｒｃｉｓｅｓ．
 
 i.e. using my mathematical background for evil.
