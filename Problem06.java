@@ -9,18 +9,19 @@
 // goal: a program for when "limit" is large (>100)
 
 class Problem06 {
-  // this method computes the sum from 1 to limit.
-  public int sum(int n) {
+
+  public static int sum(int n) {
     int finalSum = (n*(n+1))/2;
     return finalSum;
   }
-  // this method computes the sum of squares from 1 to limit.
-  public int sqSum(int n) {
+
+  public static int sqSum(int n) {
     int finalSqSum = (n*((2*n)+1)*(n+1))/6;
     return finalSqSum;
   }
+  
   public static void main(String[] ars) {
-    Problem06 prob6 = new Problem06();
-    System.out.println(prob6.sum(100)*prob6.sum(100) - prob6.sqSum(100));
+    System.out.println(sum(100)*sum(100) - sqSum(100));
   }
+  
 }

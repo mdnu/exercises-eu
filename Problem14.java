@@ -15,32 +15,35 @@ import java.util.Collections;
 
 class Problem14 {
 	
-	public long MAX = 1000000;
+	public static long MAX = 1000000;
 	
 	public static void main(String[] args) {
-		
-		Problem14 im = new Problem14();
 		List<Integer> index = new ArrayList<Integer>();
 		
-		for (int i=0;i<=im.MAX+1;i++) {
+		for (int i=0;i<=MAX+1;i++) {
 			int count = 0;
 			long work = i;
+			
 			while (work >1) {
+				
 				if (work<i) {
 					count+=index.get((int)work);
 					break;
+					
 				} else if (work%2==0) {
 					work/=2;
 					count++;
+					
 				} else {
 					work = (3*work)+1;
 					count++;
+					
 				}
 			}
+			
 			index.add(i, count);
 		}
 		
 		System.out.println(index.indexOf(Collections.max(index)));
-		
 	}
 }

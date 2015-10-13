@@ -44,16 +44,18 @@ class Problem18 {
 		
 		while (i>=0) {
 			int j = 0;
+			
 			while (j <= i) {
 				triangle[i][j]+=
 				supremum(triangle[i+1][j],triangle[i+1][j+1]);
 				j++;
 			}
+			
 			i--;
 		}
+		
 		System.out.print(triangle[0][0]);
 	}
-	
 }
 
 // computes in 0 milliseconds.

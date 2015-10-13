@@ -6,31 +6,35 @@ import java.math.BigInteger;
 
 class Problem16 {
 	
-	public BigInteger twoPowerFive = new BigInteger("32");
+	public static BigInteger twoPowerFive = new BigInteger("32");
 	
-	public BigInteger result(int power) {
-		
+	public static BigInteger result(int power) {
 		BigInteger result = BigInteger.ONE;
 		int multiplicity = power/5;
+		
 		while (multiplicity >= 1) {
 			result = result.multiply(twoPowerFive);
 			multiplicity--;
-		} return result;
+		} 
+		
+		return result;
 	}
 	
-	public int parseThroughBigInteger(BigInteger result) {
+	public static int parseThroughBigInteger(BigInteger result) {
 		int sum = 0;
+		
 		while (result.signum()==1) {
 			BigInteger modTen = result.remainder(result.TEN);
 			sum+=modTen.intValue();
 			result = result.divide(result.TEN);
-		} return sum;
+		} 
+		
+		return sum;
 	}
 	
 	public static void main(String[] args) {
-		Problem16 im = new Problem16();
 		int power = 1000;
-		System.out.println(im.parseThroughBigInteger(im.result(power)));
+		System.out.println(parseThroughBigInteger(result(power)));
 	}
 	
 }

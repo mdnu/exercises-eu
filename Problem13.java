@@ -5,27 +5,29 @@ import java.math.BigInteger;
 
 class Problem13 {
 	
-	public BigInteger[] transport(String[] archive, BigInteger[] storage) {
+	public static BigInteger[] transport(String[] archive, BigInteger[] storage) {
 		for (int i=0;i<100;i++) {
 			storage[i] = new BigInteger(archive[i]);
-		} return storage;
+		} 
+		
+		return storage;
 	}
 	
-	public BigInteger sum(BigInteger[] storage) {
+	public static BigInteger sum(BigInteger[] storage) {
 		BigInteger round = new BigInteger
 		("1000000000000000000000000000000000000000000");
 		BigInteger sum = new BigInteger("0");
+		
 		for (int i=0;i<100;i++) {
 			BigInteger b = storage[i];
 			sum = sum.add(b);
 		} 
+		
 		BigInteger sum2 = sum.subtract(sum.mod(round));
 		return sum2.divide(round);
 	}
 	
 	public static void main(String[] args) {
-		
-		Problem13 im = new Problem13();
 		
 		String[] archive = 
 		{"37107287533902102798797998220837590246510135740250",
@@ -131,8 +133,8 @@ class Problem13 {
 		};
 		
 		BigInteger[] storage = new BigInteger[100];
-		BigInteger[] storage2 = im.transport(archive, storage);
-		BigInteger finalsum = im.sum(storage2);
+		BigInteger[] storage2 = transport(archive, storage);
+		BigInteger finalsum = sum(storage2);
 		System.out.println(finalsum);
 	}
 	

@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Problem10 {
+	
   public static void main(String[] args) {
+	  
     List<Long> list = new ArrayList<Long>();
     int n = 2000000;
     int rootn = (int) Math.sqrt(n);
@@ -16,9 +18,12 @@ class Problem10 {
     for (int i = 2; i <= rootn; i++) {
       if (!composite[i]) {
         list.add(Long.valueOf(i));
+		
         for (int k = i*i; k<= n; k += i) {
           composite[k] = true;
+		  
         }
+		
       }
     }
 
@@ -31,6 +36,7 @@ class Problem10 {
     for (long j:list) {
       sum += j;
     }
+	
     System.out.println(sum);
   }
 }

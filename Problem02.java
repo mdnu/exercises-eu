@@ -6,23 +6,23 @@
 // not exceed four million, find the sum of the even-valued terms.
 
 class Problem02 {
+	
   public static void main(String[] args) {
-    int limit = 4000000;
-    // 'sum' will be our final answer.
-    int sum = 0;
-    // auxilliary variables for the Fibonacci sequence.
-    int a = 1;
-    int b = 1;
+	  
+    int limit = 4000000, sum = 0;
+    int a = 1, b = 1;
+	
     while (b < limit) {
-      if (b%2 ==0) {
+      
+	  if (b%2 ==0) {
         sum+=b;
-        //the above line adds the even valued term 'b',
       }
-      // below is how we progress through the Fib sequence.
-      int h=a+b;
+	  
+      int h = (a+b);
       a=b;
       b=h;
     }
+	
     System.out.println(sum);
   }
 }

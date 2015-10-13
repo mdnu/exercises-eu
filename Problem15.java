@@ -17,31 +17,34 @@ import java.math.BigInteger;
 
 class Problem15 {
 	
-	public int SIZE = 20;
+	public static int SIZE = 20;
 	
-	public BigInteger factorial(int n) {
+	public static BigInteger factorial(int n) {
 		BigInteger b = new BigInteger(Integer.toString(n));
+		
 		if (n ==0) {
 			BigInteger one = new BigInteger("1");
 			return one;
+			
 		} else {
+			
 			while (n>2) {
 				BigInteger next = new BigInteger(Integer.toString(n-1));
 				b = b.multiply(next);
 				n--;
-			} return b;
+			} 
+			
+			return b;
 		}
 	}
 	
-	public BigInteger nChooseK(int n, int k) {
-		Problem15 im = new Problem15();
+	public static BigInteger nChooseK(int n, int k) {
 		return 
-		im.factorial(n).divide(im.factorial(k).multiply(im.factorial(n-k)));
+		factorial(n).divide(factorial(k).multiply(factorial(n-k)));
 	}
 	
 	public static void main(String[] args) {
-		Problem15 im = new Problem15();
-		System.out.println(im.nChooseK(2*im.SIZE, im.SIZE));
+		System.out.println(nChooseK(2*SIZE, SIZE));
 	}
-	
 }
+

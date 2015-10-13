@@ -3,7 +3,9 @@ import java.util.List;
 import java.util.Collections;
 
 class Problem11 {
+	
   public static void main(String[] args) {
+	  
     int[][] array = 
 	{{8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8},
     {49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0},
@@ -29,49 +31,53 @@ class Problem11 {
 	List<Integer> storage = new ArrayList<Integer>();
 	
 	for (int i=0;i<=19;i++) {
+		
 		for (int j=0;j<=19;j++) {
+			int three = 3;
+			
 			// East
-			int k = 3;
 			int productEast = 1;
-			while (k>=0) {
-				if ((j+k)<=19) {
-					productEast = productEast*array[i][j+k];
+			while (three>=0) {
+				if ((j+three)<=19) {
+					productEast = productEast*array[i][j+three];
 				}
-				k--;
+				three--;
 			}
 			storage.add(productEast);
+			
 			// South-East
-			int l = 3;
 			int productSE = 1;
-			while (l>=0) {
-				if ((i+l)<=19 && (j+l)<=19) {
-					productSE = productSE*array[i+l][j+l];
+			while (three>=0) {
+				if ((i+three)<=19 && (j+three)<=19) {
+					productSE = productSE*array[i+three][j+three];
 				}
-				l--;
+				three--;
 			}
 			storage.add(productSE);
+			
 			// South
-			int m = 3;
 			int productSouth = 1;
-			while (m>=0) {
-				if ((i+m)<=19) {
-					productSouth = productSouth*array[i+m][j];
+			while (three>=0) {
+				if ((i+three)<=19) {
+					productSouth = productSouth*array[i+three][j];
 				}
-				m--;
+				three--;
 			}
 			storage.add(productSouth);
+			
 			// South-West
-			int n = 3;
 			int productSW = 1;
-			while (n>=0) {
-				if ((i+n)<=19 && (j-n)<=19 && (j-n)>=0) {
-					productSW = productSW*array[i+n][j-n];
+			while (three>=0) {
+				if ((i+three)<=19 && (j-three)<=19 && (j-three)>=0) {
+					productSW = productSW*array[i+three][j-three];
 				}
-				n--;
+				three--;
 			}
 			storage.add(productSW);
+			
 		}
 	}
+	
 	System.out.println(Collections.max(storage));
   }
 }

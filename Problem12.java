@@ -19,30 +19,33 @@ What is the value of the first triangle number to have over five hundred divisor
 
 class Problem12 {
 	
-	public int numDivisors(int triNum) {
+	public static int numDivisors(int triNum) {
 		int count = 0;
+		
 		for (int i = 1; i<=Math.sqrt(triNum); i++) {
 			if (triNum%i == 0) {
 				count+=2;
 			}
 		}
+		
 		return count;
 	}
 	
-	public int triNum(int num) {
+	public static int triNum(int num) {
 		return num*(num+1)/2;
 	}
 	
 	public static void main(String[] args) {
-		Problem12 im = new Problem12();
 		for (int i=1;;i++) {
-			int triNum = im.triNum(i);
-			int div = im.numDivisors(triNum);
+			int triNum = triNum(i);
+			int div = numDivisors(triNum);
+			
 			if (div > 500) {
 				System.out.println(triNum);
 				break;
 			}
+			
 		}
+		
 	}
-	
 }
