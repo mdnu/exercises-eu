@@ -6,23 +6,20 @@
 // not exceed four million, find the sum of the even-valued terms.
 
 class Problem02 {
+	public static void main(String[] args) {
+		int limit = 4000000, sum = 0;
+		int a = 1, b = 1;
 	
-  public static void main(String[] args) {
-	  
-    int limit = 4000000, sum = 0;
-    int a = 1, b = 1;
-	
-    while (b < limit) {
+		while (b < limit) {
       
-	  if (b%2 ==0) {
-        sum+=b;
-      }
+			if (b%2 ==0) {
+				sum+=b;
+			}
 	  
-      int h = (a+b);
-      a=b;
-      b=h;
-    }
-	
-    System.out.println(sum);
-  }
+			int h = (a+b);
+			a=b;
+			b=h;
+		}
+		System.out.println(sum);
+	}
 }

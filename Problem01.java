@@ -5,15 +5,15 @@
 
 class Problem01 {
 	
-  public static int max = 999;
+	public static int max = 999;
 
-  public static int SumDivN(int n) {
-    int p = max/n;
-    return (n*(p*(p+1)))/2;
-  }
+	public static int SumDivN(int n) {
+		int p = max/n;
+		return (n*(p*(p+1)))/2;
+	}
   
-  public static void main(String[] args) {
-    System.out.println(SumDivN(3) + SumDivN(5)- SumDivN(15));
-  }
-  
+	public static void main(String[] args) {
+		System.out.println(SumDivN(3) + SumDivN(5)- SumDivN(15));
+	}
+	
 }
