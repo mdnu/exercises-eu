@@ -8,8 +8,8 @@ class Problem01 {
 	public static int max = 999;
 
 	public static int SumDivN(int n) {
-		int p = max/n;
-		return (n*(p*(p+1)))/2;
+		int p = max / n;
+		return (n * (p * (p + 1))) / 2;
 	}
   
 	public static void main(String[] args) {

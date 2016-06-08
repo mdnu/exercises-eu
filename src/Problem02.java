@@ -12,13 +12,13 @@ class Problem02 {
 	
 		while (b < limit) {
       
-			if (b%2 ==0) {
-				sum+=b;
+			if (b % 2 ==0) {
+				sum += b;
 			}
 	  
-			int h = (a+b);
-			a=b;
-			b=h;
+			int h = (a + b);
+			a = b;
+			b = h;
 		}
 		System.out.println(sum);
 	}

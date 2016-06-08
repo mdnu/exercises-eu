@@ -7,25 +7,25 @@ class Problem03 {
 	public static void main(String[] args) {
 		long n = 600851475143L;
 		
-		if (n%2==0) {
+		if (n % 2 == 0) {
 			int lastFactor = 2;
-			while (n%2==0) {
-				n/=2;
+			while (n % 2 == 0) {
+				n /= 2;
 			}
 		}
 		
-		int lastFactor = 1; factor = 3;
+		int lastFactor = 1, factor = 3;
 		
-		while (n>1) {
-			if (n%factor==0) {
+		while (n > 1) {
+			if (n % factor==0) {
 				lastFactor = factor;
-				while (n%factor==0) {
-					n/=factor;
+				while (n % factor==0) {
+					n /= factor;
 				}
 			}
-			factor+=2;
+			factor += 2;
 		}
 		
-		System.out.println(lastFactor;)
+		System.out.println(lastFactor);
 	}
 }

@@ -7,13 +7,13 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-class Problem04 {
+public class Problem04 {
 	
 	public static int reverse(int n) {
 		int reversed = 0;
-		while (n>0) {
-			reversed = 10*reversed + (n%10);
-			n/=10;
+		while (n > 0) {
+			reversed = 10 * reversed + (n % 10);
+			n /= 10;
 		}
 		return reversed;
 	}
@@ -27,14 +27,14 @@ class Problem04 {
 	}
 	
 	public static void main(String[] args) {
-		int largestPalindrome = 0; a = 100;
+		int largestPalindrome = 0, a = 100;
 		
-		while (a<=999) {
+		while (a <= 999) {
 			int b = 100;
 			
-			while (b<=999) {
-				if (isPalindrome(a*b)&&((a*b)>largestPalindrome)) {
-					largestPalindrome = a*b;
+			while (b <= 999) {
+				if (isPalindrome(a * b) && ((a * b) > largestPalindrome)) {
+					largestPalindrome = a * b;
 				}
 				b++;
 			}
