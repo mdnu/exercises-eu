@@ -1,15 +1,16 @@
-// Work out the first ten digits of the sum 
-// of the following one-hundred 50-digit numbers.
+/**
+ * Work out the first ten digits of the sum
+ * of the following one-hundred 50-digit numbers. (See below)
+ */
 
 import java.math.BigInteger;
 
-class Problem13 {
+public class Problem13 {
 	
 	public static BigInteger[] transport(String[] archive, BigInteger[] storage) {
 		for (int i=0;i<100;i++) {
 			storage[i] = new BigInteger(archive[i]);
 		} 
-		
 		return storage;
 	}
 	
@@ -22,13 +23,11 @@ class Problem13 {
 			BigInteger b = storage[i];
 			sum = sum.add(b);
 		} 
-		
 		BigInteger sum2 = sum.subtract(sum.mod(round));
 		return sum2.divide(round);
 	}
 	
 	public static void main(String[] args) {
-		
 		String[] archive = 
 		{"37107287533902102798797998220837590246510135740250",
 		"46376937677490009712648124896970078050417018260538",
@@ -137,5 +136,4 @@ class Problem13 {
 		BigInteger finalsum = sum(storage2);
 		System.out.println(finalsum);
 	}
-	
 }
