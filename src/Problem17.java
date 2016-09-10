@@ -1,17 +1,16 @@
-/* If the numbers 1 to 5 are written out in words: one, two, three, four, five, 
-then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
-
-If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, 
-how many letters would be used?
+/** 
+ * If the numbers 1 to 5 are written out in words: one, two, three, four, five, 
+ * then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+ * If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, 
+ * how many letters would be used?
  */
  
-class Problem17 {
-	
+public class Problem17 {
 	public static String regularExpression = "[^A-z]";
 	
 	public static String numConvert(int number) {
 		String numString = "";
-		
+
 		if (number < 10) {
 			switch (number) {
 				case 1: numString = "one";
@@ -32,7 +31,6 @@ class Problem17 {
 						break;
 				case 9: numString = "nine";
 			}
-			
 		} else if ((number>=10)&&(number<=19)) {
 			switch (number) {
 				case 10: numString = "ten";
@@ -57,7 +55,6 @@ class Problem17 {
 						break;
 			}
 		} 
-
 		return numString;
 	}
 	
@@ -71,7 +68,6 @@ class Problem17 {
 		while (number > 9) {
 			number/= 10;
 		} 
-		
 		return number;
 	}
 	
@@ -79,7 +75,6 @@ class Problem17 {
 		int count = 0;
 		
 		switch (getFirstDigit(i)) {
-			
 			case 2: {
 				String numString = numConvert(i%20);
 				count+=getStrCount(numString) + 6;
@@ -120,9 +115,7 @@ class Problem17 {
 				count+=getStrCount(numString) + 6;
 				break;
 			}
-			
 		}
-		
 		return count;
 	}
 	
@@ -139,9 +132,7 @@ class Problem17 {
 		}
 		
 		for (int i=100;i<=1000;i++) {
-			
 			if (i!=1000) {
-				
 				if ((i%100==0)) {
 					String numString = numConvert(i/100);
 					finCount+=getStrCount(numString)+7;
@@ -155,14 +146,11 @@ class Problem17 {
 					} else if (((i%100)>=20)&&((i%100)<=99)) {
 						finCount+=getStrCount(hdStr)+temp(i%100) + 10;
 					}
-					
 				}
-				
 			} else {
 				finCount+=11;
 			}
 		}
-		
 		System.out.println(finCount);
 	}
 }

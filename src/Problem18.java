@@ -1,16 +1,16 @@
-/* By starting at the top of the triangle below and moving to adjacent 
-numbers on the row below, the maximum total from top to bottom is 23.
+/**
+ * By starting at the top of the triangle below and moving to adjacent 
+ * numbers on the row below, the maximum total from top to bottom is 23.
+ * 3
+ * 7 4
+ * 2 4 6
+ * 8 5 9 3
+ * That is, 3 + 7 + 4 + 9 = 23.
+ * Find the maximum total from top to bottom of the triangle below:
+ * (See the class body for triangle). 
+ */
 
-3
-7 4
-2 4 6
-8 5 9 3
-
-That is, 3 + 7 + 4 + 9 = 23.
-Find the maximum total from top to bottom of the triangle below:
-(See the class body for triangle). */
-
-class Problem18 {
+public class Problem18 {
 	
 	private static int[][] triangle = {
 		{75},
@@ -39,7 +39,6 @@ class Problem18 {
 	}
 	
 	public static void main(String[] args) {
-		
 		int i = triangle.length-2;
 		
 		while (i>=0) {
@@ -50,12 +49,8 @@ class Problem18 {
 				supremum(triangle[i+1][j],triangle[i+1][j+1]);
 				j++;
 			}
-			
 			i--;
 		}
-		
 		System.out.print(triangle[0][0]);
 	}
 }
-
-// computes in 0 milliseconds.
